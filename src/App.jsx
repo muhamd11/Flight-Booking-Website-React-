@@ -10,13 +10,14 @@ import Travelers from './Components/Travelers/Travelers';
 import Subscriber from './Components/Subscribers/Subscriber';
 import Footer from './Components/Footer/Footer';
 
+
 function App() {
 
   return (
     <div>
       <Navbar />
-      {/* <Home />
-      <Search />
+      <Home />
+      {/* <Search />
       <Support />
       <Info />
       <Lounge />

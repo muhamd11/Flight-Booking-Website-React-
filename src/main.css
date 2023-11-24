@@ -22,7 +22,7 @@
     --greyBg: hsl(0, 0%, 96%);
     --greyText: rgb(145, 145, 145);
     --inputColor: hsl(330, 12%, 97%);
-    --boxShadow: box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+    --boxShadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
     --transition: .4s ease-in-out;
 }
 
@@ -48,9 +48,6 @@ li {
     font-size: 1.3rem;
     cursor: pointer;
 }
-.none {
-    display: none;
-}
 .flex {
     display: flex;
     align-items: center;
@@ -58,6 +55,9 @@ li {
 .grid {
     display: grid;
     align-items: center;
+}
+.none {
+    display: none;
 }
 .btn {
     padding: .7rem 1.5rem;
@@ -105,14 +105,165 @@ h2 {
     color: var(--BlackColor);
 }
 
+/* Start Navbar */
+.navbar {
+    position: fixed;
+    flex-direction: column;
+    width: 100%;
+    z-index: 1000;
+}
+.navbar-one, .navbar-two {
+        justify-content: space-between;
+        padding: 1rem;
+        width: 100%;
+}
+
+.navbar-one {
+    background: var(--secondaryColor);
+}
+.navbar-one .icon:hover {
+            color: var(--primaryColor);
+}
+.navbar-one .atb {
+    gap: 1rem;
+}
+.navbar-one .atb span {
+    color: var(--BlackColor);
+    font-size: 13px;
+    cursor: pointer;
+}
+.navbar-one .atb span:hover {
+    color: var(--primaryColor);
+    font-weight: 700;
+}
+.navbar-two {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    top: 3rem;
+    padding: 1.5rem 1rem;
+    position: fixed;
+    transition: .3s ease-in-out;
+    -webkit-transition: .3s ease-in-out;
+    -moz-transition: .3s ease-in-out;
+    -ms-transition: .3s ease-in-out;
+    -o-transition: .3s ease-in-out;
+}
+.navbar-two .logo-div .logo {
+    width: 20%;
+}
+.toggle-icon {
+    display: none;
+}
+@media (max-width: 768px) {
+    .navbar-menu {
+        position: absolute;
+        background: var(--secondaryColor);
+        padding: 1.7rem;
+        border-radius: 10px;
+        -webkit-border-radius: 10px;
+        -moz-border-radius: 10px;
+        -ms-border-radius: 10px;
+        -o-border-radius: 10px;
+        top: 5rem;
+        right: -50%;
+        transform: translateX(50%);
+        -webkit-transform: translateX(50%);
+        -moz-transform: translateX(50%);
+        -ms-transform: translateX(50%);
+        -o-transform: translateX(50%);
+        z-index: 2000;
+        box-shadow: var(--boxShadow);
+        border: 3px solid var(--whiteColor);
+        transition: .4s ease-in-out;
+        -webkit-transition: .4s ease-in-out;
+        -moz-transition: .4s ease-in-out;
+        -ms-transition: .4s ease-in-out;
+        -o-transition: .4s ease-in-out;
+    }
+    .navbar-menu .menu {
+        flex-direction: column;
+        gap: .5rem;
+        text-align: center;
+    }
+    .navbar-menu .menu li {
+        padding: .5rem 0;
+        cursor: pointer;
+        color: var(--BlackColor);
+        transition: .1s ease-in-out;
+        -webkit-transition: .1s ease-in-out;
+        -moz-transition: .1s ease-in-out;
+        -ms-transition: .1s ease-in-out;
+        -o-transition: .1s ease-in-out;
+    }
+    .navbar-menu .menu li:hover {
+        color: var(--primaryColor);
+        font-weight: 700;
+    }
+    .navbar-menu .btn-one {
+        display: block;
+        justify-content: center;
+        margin: auto;
+        margin-top: 1rem;
+    }
+    .navbar-two .toggle-icon {
+        display: block;
+    }
+    .navbar-two .toggle-icon .icon{
+        font-size: 30px;
+        color: var(--BlackColor);
+    }
+    .show-navbar {
+        right: 50%;
+    }
+}
 
 
-
-
-
-
-
-
+/* Start Home Page */
+.home {
+    padding-top: 14rem;
+    text-align: center;
+    gap: 2rem;
+    flex-direction: column;
+}
+.home .main-text {
+    color: var(--BlackColor);
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 2.5rem;
+}
+.home .home-imgs {
+    width: 100%;
+    margin: 1rem auto 0;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    border-radius: 5rem;
+    -webkit-border-radius: 5rem;
+    -moz-border-radius: 5rem;
+    -ms-border-radius: 5rem;
+    -o-border-radius: 5rem;
+}
+.home .home-imgs .video-div {
+    width: 100%;
+}
+.home .home-imgs .video-div .video {
+    border-radius: 10rem;
+    -webkit-border-radius: 10rem;
+    -moz-border-radius: 10rem;
+    -ms-border-radius: 10rem;
+    -o-border-radius: 10rem;
+}
+.home .home-imgs .plane {
+    position: absolute;
+    width: 100%;
+    top: -35%;
+    transform: rotate(13deg) ;
+    -webkit-transform: rotate(13deg) ;
+    -moz-transform: rotate(13deg) ;
+    -ms-transform: rotate(13deg) ;
+    -o-transform: rotate(13deg) ;
+}
 
 
 

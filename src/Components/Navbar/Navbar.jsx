@@ -3,10 +3,11 @@ import React, { useState } from "react";
 import { SiConsul } from "react-icons/si";
 import { BsPhoneVibrate } from "react-icons/bs";
 import { AiOutlineGlobal } from "react-icons/ai";
-import logo from "../../Assets/logo.png";
 import { CgMenuGridO } from "react-icons/cg";
+import { IoAirplane } from "react-icons/io5";
 
 const Navbar = () => {
+
   // Remove Navbar In Small Screen
   const [active, setActive] = useState("navbar-menu");
   const showNavbar = () => {
@@ -14,23 +15,33 @@ const Navbar = () => {
       ? setActive("navbar-menu show-navbar")
       : setActive("navbar-menu");
   };
-  // Remove Navbar When Item Clicked 
+
+  // Remove Navbar When Item Clicked
   const removeNavbar = () => {
-    setActive("navbar-menu")
-  } 
+    setActive("navbar-menu");
+  };
+
+  // Add Background While Scrolling
+  const [bg, setBg] = useState("navbar-two flex");
+  const addBg = () => {
+    setBg("navbar-two flex add-bg");
+  };
+  window.addEventListener("scroll", () => {
+    window.scrollY >= 10 ? addBg() : setBg("navbar-two flex");
+  });
 
   return (
     <div className="navbar flex">
       <div className="navbar-one flex">
         <div>
-          <SiConsul />
+          <SiConsul className="icon" />
         </div>
-        <div className="none flex">
-          <li className="flex">
-            <BsPhoneVibrate className="icon" /> Support
+        <div className="mid-items none flex">
+          <li className="info flex">
+            <BsPhoneVibrate className="icon" /> <span>Support</span>
           </li>
-          <li className="flex">
-            <AiOutlineGlobal className="icon" /> Languages
+          <li className="info flex">
+            <AiOutlineGlobal className="icon" /> <span>Languages</span>
           </li>
         </div>
         <div className="atb flex">
@@ -38,9 +49,9 @@ const Navbar = () => {
           <span>Sign Out</span>
         </div>
       </div>
-      <div className="navbar-two flex">
+      <div className={bg}>
         <div className="logo-div">
-          <img src={logo} alt="Flight Website Logo" className="logo" />
+          <IoAirplane className="logo" />
         </div>
         <div className={active}>
           <ul className="menu flex">
@@ -50,7 +61,9 @@ const Navbar = () => {
             <li onClick={removeNavbar}>Seats</li>
             <li onClick={removeNavbar}>Destinations</li>
           </ul>
-          <button onClick={removeNavbar} className="btn btn-one">Contact</button>
+          <button onClick={removeNavbar} className="btn btn-one">
+            Contact
+          </button>
         </div>
         <button className="btn btn-two none">Contact</button>
         <div onClick={showNavbar} className="toggle-icon">

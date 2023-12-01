@@ -669,3 +669,36 @@ h2 {
   -ms-transition: 1s ease-in-out;
   -o-transition: 1s ease-in-out;
 }
+/* Start Subscribe */
+.subscribe .section-container {
+  background: var(--greyBg);
+}
+.subscribe .section-container {
+  text-align: center;
+}
+.subscribe .section-container form  {
+  margin-top: 1rem;
+  flex-direction: column;
+  background: var(--whiteColor);
+  border-radius: 1rem;
+  -webkit-border-radius: 1rem;
+  -moz-border-radius: 1rem;
+  -ms-border-radius: 1rem;
+  -o-border-radius: 1rem;
+}
+.subscribe .section-container form input {
+  border: none;
+  outline: none;
+  background: transparent;
+  padding: 1rem .5rem;
+}
+.subscribe .section-container form input::placeholder {
+  font-size: 13px;
+  opacity: .5;
+}
+.subscribe .section-container form .btn {
+  width: 100%;
+}
+/* Start Footer */
+
+

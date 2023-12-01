@@ -20,8 +20,8 @@ function App() {
       <Info />
       <Lounge />
       <Travelers />
-      {/* <Subscriber />
-      <Footer />  */}
+      <Subscriber />
+      <Footer /> 
     </div>
   );
 }

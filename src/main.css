@@ -397,13 +397,13 @@ h2 {
   text-align: center;
 }
 .support .section-container .titles-div small {
-  letter-spacing: .8rem;
+  letter-spacing: 0.8rem;
   text-transform: uppercase;
   font-size: 13px;
   color: var(--BlackColor);
   line-height: 1.5rem;
 }
-.support .section-container .info-div  {
+.support .section-container .info-div {
   margin-top: 2rem;
   gap: 1.5rem;
 }
@@ -456,7 +456,7 @@ h2 {
   gap: 1.5rem;
   margin-top: 3rem;
 }
-.info .info-container .cards-div  .single-card {
+.info .info-container .cards-div .single-card {
   background: var(--whiteColor);
   padding: 3rem 2rem;
   border-radius: 10rem;
@@ -471,7 +471,7 @@ h2 {
   max-width: 250px;
   margin: auto;
 }
-.info .info-container .cards-div  .single-card .icon-div {
+.info .info-container .cards-div .single-card .icon-div {
   justify-content: center;
   margin: auto;
   background: var(--primaryColor);
@@ -484,16 +484,16 @@ h2 {
   -ms-border-radius: 3rem;
   -o-border-radius: 3rem;
 }
-.info .info-container .cards-div  .single-card .color-one {
+.info .info-container .cards-div .single-card .color-one {
   background: var(--colorOne);
 }
-.info .info-container .cards-div  .single-card .color-two {
+.info .info-container .cards-div .single-card .color-two {
   background: var(--colorTwo);
 }
-.info .info-container .cards-div  .single-card .icon-div .icon {
+.info .info-container .cards-div .single-card .icon-div .icon {
   color: var(--whiteColor);
 }
-.info .info-container .cards-div  .single-card .card-title {
+.info .info-container .cards-div .single-card .card-title {
   color: var(--BlackColor);
   font-weight: 700;
 }
@@ -514,18 +514,158 @@ h2 {
   -ms-border-radius: 3rem;
   -o-border-radius: 3rem;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.lounge .section-container .text-div .grids {
+  margin-top: 1rem;
+  gap: 1.5rem;
+}
+.lounge .section-container .text-div .grids .single-grid .grid-title {
+  display: block;
+  padding-bottom: 0.5rem;
+  font-weight: 500;
+  color: var(--BlackColor);
+}
+/* Start Travelers Here */
+.travelers .section-container {
+  text-align: center;
+}
+.travelers .section-container .travelers-container {
+  margin-top: 1rem;
+  gap: 1.5rem;
+}
+.travelers .section-container .travelers-container .single-traveler {
+  position: relative;
+  height: 280px;
+  width: 85%;
+  max-width: 250px;
+  overflow: hidden;
+  gap: 1rem;
+  margin: auto;
+  border-radius: 10rem;
+  -webkit-border-radius: 10rem;
+  -moz-border-radius: 10rem;
+  -ms-border-radius: 10rem;
+  -o-border-radius: 10rem;
+}
+.travelers .single-traveler .destination-image,
+.traveler-image,
+.traveler-name {
+  position: absolute;
+}
+.travelers .single-traveler .destination-image {
+  width: 100%;
+  height: 100%;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+}
+.travelers .single-traveler .traveler-image {
+  height: 50px;
+  width: 50px;
+  object-fit: cover;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  bottom: 30px;
+  left: 40%;
+  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  border: 5px solid rgba(225, 225, 225, 0.637);
+  transition: var(--transition);
+  -webkit-transition: var(--transition);
+  -moz-transition: var(--transition);
+  -ms-transition: var(--transition);
+  -o-transition: var(--transition);
+  animation: animated 2.3s infinite;
+  -webkit-animation: animated 2.3s infinite;
+}
+@keyframes animated {
+  0% {
+    transform: translateY(0px);
+    -webkit-transform: translateY(0px);
+    -moz-transform: translateY(0px);
+    -ms-transform: translateY(0px);
+    -o-transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(8px);
+    -webkit-transform: translateY(8px);
+    -moz-transform: translateY(8px);
+    -ms-transform: translateY(8px);
+    -o-transform: translateY(8px);
+  }
+  100% {
+    transform: translateY(0px);
+    -webkit-transform: translateY(0px);
+    -moz-transform: translateY(0px);
+    -ms-transform: translateY(0px);
+    -o-transform: translateY(0px);
+  }
+}
+.travelers .single-traveler .traveler-name {
+  bottom: -100%;
+  width: 100%;
+  height: max-content;
+  background: var(--whiteColor);
+  padding: 1.5rem 1rem;
+  transition: var(--transition);
+  -webkit-transition: var(--transition);
+  -moz-transition: var(--transition);
+  -ms-transition: var(--transition);
+  -o-transition: var(--transition);
+  animation: animated-borders 2.3s infinite;
+  -webkit-animation: animated-borders 2.3s infinite;
+}
+.travelers .single-traveler .traveler-name span {
+  display: block;
+  color: var(--BlackColor);
+  font-weight: 700;
+}
+.travelers .single-traveler .traveler-name p {
+  color: var(--primaryColor);
+  font-style: italic;
+}
+@keyframes animated-borders {
+  0% {
+    border-radius: 0rem;
+    -webkit-border-radius: 0rem;
+    -moz-border-radius: 0rem;
+    -ms-border-radius: 0rem;
+    -o-border-radius: 0rem;
+  }
+  50% {
+    border-radius: 2rem;
+    -webkit-border-radius: 2rem;
+    -moz-border-radius: 2rem;
+    -ms-border-radius: 2rem;
+    -o-border-radius: 2rem;
+  }
+  100% {
+    border-radius: 0rem;
+    -webkit-border-radius: 0rem;
+    -moz-border-radius: 0rem;
+    -ms-border-radius: 0rem;
+    -o-border-radius: 0rem;
+  }
+}
+.travelers .single-traveler:hover .traveler-name {
+  bottom: 0;
+  transition: 1s ease-in-out;
+  -webkit-transition: 1s ease-in-out;
+  -moz-transition: 1s ease-in-out;
+  -ms-transition: 1s ease-in-out;
+  -o-transition: 1s ease-in-out;
+}
+.travelers .single-traveler:hover .traveler-image {
+  bottom: 110px;
+  transition: 1s ease-in-out;
+  -webkit-transition: 1s ease-in-out;
+  -moz-transition: 1s ease-in-out;
+  -ms-transition: 1s ease-in-out;
+  -o-transition: 1s ease-in-out;
+}

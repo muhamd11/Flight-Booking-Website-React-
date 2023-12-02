@@ -6,6 +6,7 @@ import { AiOutlineGlobal } from "react-icons/ai";
 import { CgMenuGridO } from "react-icons/cg";
 import { IoAirplane } from "react-icons/io5";
 
+
 const Navbar = () => {
 
   // Remove Navbar In Small Screen
